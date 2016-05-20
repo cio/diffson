@@ -69,6 +69,6 @@ private final case class Path(prefix: Pointer, elem: String) extends Pointer {
   override def toString =
     prefix match {
       case Root => f"/${elem.replace("~", "~0").replace("/", "~1")}"
-      case _    => f"${prefix}${elem.replace("~", "~0").replace("/", "~1")}"
+      case _    => f"${prefix}/${elem.replace("~", "~0").replace("/", "~1")}"
     }
 }
